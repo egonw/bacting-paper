@@ -92,6 +92,12 @@ in personal use cases, some of which are briefly described in this table:
 | opsin                | Access to the OPSIN library for parsing IUPAC names [@Lowe2011]                      |
 | bridgedb             | Access to the BridgeDb library for identifier mapping [@vanIersel2010]               |
 
+The functionality of the Bioclipse managers is partly documented in the 
+[A lot of Bioclipse Scripting Language examples](https://bioclipse.github.io/bioclipse.scripting/) booklet,
+of which several scripts are available as Bacting examples. For example, the
+[FullPathWikiPathways.groovy](https://bioclipse.github.io/bioclipse.scripting/code/FullPathWikiPathways.code.html)
+page from this booklet shows both the Bioclipse version of the script as well as the Bacting version.
+
 ## Grabbing Bacting from Groovy
 
 Use of Bacting in the Groovy language is taking advantage from the fact that it is available from Maven Central,
