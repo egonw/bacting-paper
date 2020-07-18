@@ -39,6 +39,33 @@ systems; 3. Bacting should be easy to install and reuse.
 
 # Implementation
 
+To keep the option open to backport new functionality to Bioclipse, the API is copied as
+precisely as possible. However, there are some differences. For example, there is only
+a single manager class, and no longer interfaces for both the scripting language and for
+the running Bioclipse user interface. This means that translation of *IFile* to *String*
+translations in the API do not exist in Bioclipse. Furthermore, there are currently
+no progress monitors. That said, the source code implementing the method is otherwise
+identical and easily translated back to the original Bioclipse source code.
+
+This is done by separating the Bioclipse code from the Bacting manager implementations.
+The latter is mainly described in this paper, and the former is found as much more
+stable code in the GitHub [https://github.com/egonw/bacting-bioclipse](https://github.com/egonw/bacting-bioclipse)
+repository. The code is identical to the original Bioclipse code, but mavenized in
+this repository, allowing deployment on Maven Central.
+
+The Bacting manager are found in the [https://github.com/egonw/bacting](https://github.com/egonw/bacting)
+repository and while the maangers in this repository share most of the code with the original
+Bioclipse implementations, they are still considered new implementations and therefore
+are tested using JUnit. A second important difference is that Bioclipse documentation was
+found on the manager interfaces, but in Bacting the JavaDoc is found is found in the
+implementations of the managers.
+
+## Updated dependencies of managers
+
+The *cdk* manager wrapping Chemistry Development Kit functionality has been updated to
+version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager has
+been updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011].
+
 # Functionality
 
 
