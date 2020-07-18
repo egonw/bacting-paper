@@ -109,7 +109,9 @@ println cdk.fromSMILES("COC")
 
 The Bioclipse script have been in use in our group in various research lines to automate repetitive work.
 Various scripts have now been ported to Bacting and several are now available as open notebook science
-at [https://github.com/egonw/ons-wikidata](https://github.com/egonw/ons-wikidata). The scripts here are
+repositories at [https://github.com/egonw/ons-wikidata](https://github.com/egonw/ons-wikidata),
+[https://github.com/egonw/ons-chebi](https://github.com/egonw/ons-chebi), and
+[https://github.com/egonw/ons-wikipathways](https://github.com/egonw/ons-wikipathways). The scripts in these repositories are
 used to populate Wikidata with chemical structures in the Scholia project [@Willighagen2018] and to support WikiPathways [@Slenter2018],
 with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project, in to support the
 creating of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
