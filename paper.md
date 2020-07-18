@@ -58,23 +58,62 @@ repository and while the maangers in this repository share most of the code with
 Bioclipse implementations, they are still considered new implementations and therefore
 are tested using JUnit. A second important difference is that Bioclipse documentation was
 found on the manager interfaces, but in Bacting the JavaDoc is found is found in the
-implementations of the managers.
+implementations of the managers. A final difference is how the managers are used:
+because they are not injected into the scripting language, each manager needs to be
+created manually, which requires one extra line of code for each manager.
 
 ## Updated dependencies of managers
 
-The *cdk* manager wrapping Chemistry Development Kit functionality has been updated to
-version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager has
-been updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011].
+The *cdk* manager wrapping Chemistry Development Kit functionality was updated to
+version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager was
+updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
+manager was updated the BridgeDb version 2.3.8, released in 2020 [@vanIersel2010].
+
+## Availability 
+
+The source code for ``Bacting`` has been archived to Zenodo with the linked DOI: [@zenodo].
+Binary releases are also available from Maven Central at [https://search.maven.org/artifact/io.github.egonw.bacting/bacting](https://search.maven.org/artifact/io.github.egonw.bacting/bacting).
 
 # Functionality
 
+Bioclipse has a long list of managers and so far only a subset has been ported, focusing
+in personal use cases, some of which are briefly described in this table:
 
+| Bacting Manager      | Functionality                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| bioclipse            | Bioclipse manager with common functionality                                          |
+| ui                   | Bioclipse manager with user interface functionality                                  |
+| report               | Manager that provides an API to create HTML reports                                  |
+| cdk                  | Chemistry Development Kit for cheminformatics functionality [@Willighagen2017]       |
+| inchi                | Methods for generating and validating InChIs and InChIKeys [@Spjuth2013]             |
+| pubchem              | Methods to interact with the PubChem databases                                       |
+| chemspider           | Methods to interact with the Chemspider databases                                    |
+| rdf                  | Resource Description Framework (RDF) functionality, using Apache Jena                |
+| opsin                | Access to the OPSIN library for parsing IUPAC names [@Lowe2011]                      |
+| bridgedb             | Access to the BridgeDb library for identifier mapping [@vanIersel2010]               |
 
+## Grabbing Bacting from Groovy
 
-The source code for ``Bacting`` has been archived to Zenodo with the linked DOI: [@zenodo].
+Use of Bacting in the Groovy language is taking advantage from the fact that it is available from Maven Central,
+allowing `@Grab` to be use to dynamically download the code as in this example for the *cdk* manager:
 
+```groovy
+@Grab(group='io.github.egonw.bacting', module='managers-cdk', version='0.0.11')
 
+def cdk = new net.bioclipse.managers.CDKManager(".");
 
+println cdk.fromSMILES("COC")
+```
+
+# Use cases
+
+The Bioclipse script have been in use in our group in various research lines to automate repetitive work.
+Various scripts have now been ported to Bacting and several are now available as open notebook science
+at [https://github.com/egonw/ons-wikidata](https://github.com/egonw/ons-wikidata). The scripts here are
+used to populate Wikidata with chemical structures in the Scholia project [@Willighagen2018] and to support WikiPathways [@Slenter2018],
+with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project, in to support the
+creating of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
+Various of these use cases are ongoing and are not yet unpublished published, which is planned.
 
 # Acknowledgements
 
