@@ -84,9 +84,9 @@ making it online available with GitHub pages at [https://egonw.github.io/bacting
 ## Updated dependencies of managers
 
 The *cdk* manager wrapping Chemistry Development Kit functionality was updated to
-version 2.3, released in 2017 [@Mayfield2019, @Willighagen2017]. The *opsin* manager was
+version 2.3, released in 2017 [@Mayfield2019; @Willighagen2017]. The *opsin* manager was
 updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
-manager was updated to BridgeDb version 2.3.8, released in 2020 [@Brenninkmeijer2020, @vanIersel2010].
+manager was updated to BridgeDb version 2.3.8, released in 2020 [@Brenninkmeijer2020; @vanIersel2010].
 
 # Functionality
 
