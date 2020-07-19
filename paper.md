@@ -11,7 +11,7 @@ authors:
 affiliations:
  - name: Dept of Bioinformatics - BiGCaT, NUTRIM, Maastricht University
    index: 1
-date: 18 July 2020
+date: 19 July 2020
 bibliography: paper.bib
 ---
 
@@ -61,6 +61,24 @@ found on the manager interfaces, but in Bacting the JavaDoc is found is found in
 implementations of the managers. A final difference is how the managers are used:
 because they are not injected into the scripting language, each manager needs to be
 created manually, which requires one extra line of code for each manager.
+
+## Continuous integration and releases
+
+Bacting is hosted on GitHub and takes advantage of the integrations with Zenodo for automatic
+archiving of releases (see [https://github.com/egonw/bacting/releases](https://github.com/egonw/bacting/releases))
+and with Travis-CI for continous integration (see [https://travis-ci.org/github/egonw/bacting](https://travis-ci.org/github/egonw/bacting)).
+Maven is used as a build system and automatically downloads the dependencies when compiling the source code.
+Travis-CI compiles the source code regularly with Java 8, 11, and 14. During the process the JUnit 5 unit
+tests are run and the compilation aborted when there are testing failures.
+
+Releases are made at irregular intervals, but coninciding with downstream uses. Releases are created
+with the `mvn release:prepare` and `mvn release:performe` process that tags the commit, updates the
+version numbers, and uploads the release to Maven Central. Second, a changelog is written for the
+GitHub releases page, which triggers the archiving on Zenodo (see
+[https://doi.org/10.5281/zenodo.2638709](https://doi.org/10.5281/zenodo.2638709)). Finally, at that
+moment the JavaDoc is also generated and uploaded to another GitHub repository
+(see [https://github.com/egonw/bacting-api](https://github.com/egonw/bacting-api))
+making it online available with GitHub pages at [https://egonw.github.io/bacting-api/](https://egonw.github.io/bacting-api/).
 
 ## Updated dependencies of managers
 
