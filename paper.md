@@ -84,9 +84,9 @@ making it online available with GitHub pages at [https://egonw.github.io/bacting
 ## Updated dependencies of managers
 
 The *cdk* manager wrapping Chemistry Development Kit functionality was updated to
-version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager was
+version 2.3, released in 2017 [@Mayfield2019, @Willighagen2017]. The *opsin* manager was
 updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
-manager was updated to BridgeDb version 2.3.8, released in 2020 [@vanIersel2010].
+manager was updated to BridgeDb version 2.3.8, released in 2020 [@Brenninkmeijer2020, @vanIersel2010].
 
 # Functionality
 
@@ -132,7 +132,7 @@ Various scripts have now been ported to Bacting and several are now available as
 repositories at [https://github.com/egonw/ons-wikidata](https://github.com/egonw/ons-wikidata),
 [https://github.com/egonw/ons-chebi](https://github.com/egonw/ons-chebi), and
 [https://github.com/egonw/ons-wikipathways](https://github.com/egonw/ons-wikipathways). The scripts in these repositories are
-used to populate Wikidata with chemical structures in the Scholia project [@Willighagen2018] and to support WikiPathways [@Slenter2018],
+used to populate Wikidata with chemical structures in the Scholia project [@Nielsen2017; @Willighagen2018] and to support WikiPathways [@Slenter2018],
 with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project, in to support the
 creation of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
 Various of these use cases are ongoing and are not yet published, which is planned.
