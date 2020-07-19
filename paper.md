@@ -141,7 +141,7 @@ repositories at [https://github.com/egonw/ons-wikidata](https://github.com/egonw
 used to populate Wikidata with chemical structures to support the Scholia
 project [@Nielsen2017; @Willighagen2018], the WikiPathways project [@Slenter2018], and
 feed additional metabolite identifiers into Wikidata for creation of BridgeDb identifier mapping databases
-in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
+in an implementation study of the ELIXIR Metabolomics Community [@Willighagen2020; @vanRijswijk2017].
 Furthermore, Bacting is used to populate Wikidata with OECD Testing Guidelines in the [NanoCommons](https://www.nanocommons.eu/)
 project and extend the eNanoMapper ontology (see [https://github.com/egonw/ons-wikidata/blob/master/OECD/convertToOWL.groovy](https://github.com/egonw/ons-wikidata/blob/master/OECD/convertToOWL.groovy)) [@Hastings2015],
 to generate RDF for a public data set in the [NanoSolveIT](https://nanosolveit.eu/) project (see [https://github.com/NanoSolveIT/10.1021-acsnano.8b07562](https://github.com/NanoSolveIT/10.1021-acsnano.8b07562)) [@Afantitis2020], to create a booklet with data about the SARS-CoV-2
