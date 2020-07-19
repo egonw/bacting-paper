@@ -87,11 +87,6 @@ version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager was
 updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
 manager was updated the BridgeDb version 2.3.8, released in 2020 [@vanIersel2010].
 
-## Availability 
-
-The source code for ``Bacting`` has been archived to Zenodo with the linked DOI: [@zenodo].
-Binary releases are also available from Maven Central at [https://search.maven.org/artifact/io.github.egonw.bacting/bacting](https://search.maven.org/artifact/io.github.egonw.bacting/bacting).
-
 # Functionality
 
 Bioclipse has a long list of managers and so far only a subset has been ported, focusing
