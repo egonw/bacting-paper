@@ -17,7 +17,7 @@ bibliography: paper.bib
 
 # Summary
 
-Bioclipse was orginally developed as an interactive user interface for research in the fields
+Bioclipse was originally developed as an interactive user interface for research in the fields
 of biology and chemistry based on Eclipse [@bioclipse1]. It was later extended with scripting
 functionality and scripts could be written in JavaScript, Python, and Groovy [@bioclipse2].
 An innovative aspect of the second Bioclipse version was that Bioclipse plugins could inject
@@ -28,13 +28,13 @@ approaches, making so-called *managers* accessible in scripts.
 
 However, the dependency of Bioclipse on the Eclipse UI requires the scripts to be run inside
 a running Bioclipse application. This makes repeatedly running of a script needlessly hard
-and use in continuous integration systems or on computing platforms impossible. A second
+and use in continuous integration systems or use on computing platforms impossible. A second
 problem was that the build and release system of Bioclipse was complex, making it hard for
 others to repeat creating new releases. For example, this complicates updating dependencies.
 
 These two needs triggered a next generation design of Bioclipse: 1. the managers providing
-the domain-specific functionality would need to be useable on the command line; 2. building
-the Bioclipse managers should be possible on the command line, idealy with continuous build
+the domain-specific functionality would need to be usable on the command line; 2. building
+the Bioclipse managers should be possible on the command line, ideally with continuous build
 systems; 3. Bacting should be easy to install and reuse.
 
 # Implementation
@@ -54,7 +54,7 @@ repository. The code is identical to the original Bioclipse code, but mavenized 
 this repository, allowing deployment on Maven Central.
 
 The Bacting manager are found in the [https://github.com/egonw/bacting](https://github.com/egonw/bacting)
-repository and while the maangers in this repository share most of the code with the original
+repository and while the managers in this repository share most of the code with the original
 Bioclipse implementations, they are still considered new implementations and therefore
 are tested using JUnit. A second important difference is that Bioclipse documentation was
 found on the manager interfaces, but in Bacting the JavaDoc is found is found in the
@@ -66,13 +66,14 @@ created manually, which requires one extra line of code for each manager.
 
 Bacting is hosted on GitHub and takes advantage of the integrations with Zenodo for automatic
 archiving of releases (see [https://github.com/egonw/bacting/releases](https://github.com/egonw/bacting/releases))
-and with Travis-CI for continous integration (see [https://travis-ci.org/github/egonw/bacting](https://travis-ci.org/github/egonw/bacting)).
+and with Travis-CI for continuous integration (see [https://travis-ci.org/github/egonw/bacting](https://travis-ci.org/github/egonw/bacting)).
 Maven is used as a build system and automatically downloads the dependencies when compiling the source code.
 Travis-CI compiles the source code regularly with Java 8, 11, and 14. During the process the JUnit 5 unit
 tests are run and the compilation aborted when there are testing failures.
 
-Releases are made at irregular intervals, but coninciding with downstream uses. Releases are created
-with the `mvn release:prepare` and `mvn release:performe` process that tags the commit, updates the
+Releases are made at irregular intervals, but often triggered by downstream uses that needed additional
+Bioclipse functionality to be ported. Releases are created
+with the `mvn release:prepare` and `mvn release:perform` process that tags the commit, updates the
 version numbers, and uploads the release to Maven Central. Second, a changelog is written for the
 GitHub releases page, which triggers the archiving on Zenodo (see
 [https://doi.org/10.5281/zenodo.2638709](https://doi.org/10.5281/zenodo.2638709)). Finally, at that
@@ -85,7 +86,7 @@ making it online available with GitHub pages at [https://egonw.github.io/bacting
 The *cdk* manager wrapping Chemistry Development Kit functionality was updated to
 version 2.3, released in 2017 [@Willighagen2017]. The *opsin* manager was
 updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
-manager was updated the BridgeDb version 2.3.8, released in 2020 [@vanIersel2010].
+manager was updated to BridgeDb version 2.3.8, released in 2020 [@vanIersel2010].
 
 # Functionality
 
@@ -126,15 +127,15 @@ println cdk.fromSMILES("COC")
 
 # Use cases
 
-The Bioclipse script have been in use in our group in various research lines to automate repetitive work.
+Bioclipse scripts have been in use in our group in various research lines to automate repetitive work.
 Various scripts have now been ported to Bacting and several are now available as open notebook science
 repositories at [https://github.com/egonw/ons-wikidata](https://github.com/egonw/ons-wikidata),
 [https://github.com/egonw/ons-chebi](https://github.com/egonw/ons-chebi), and
 [https://github.com/egonw/ons-wikipathways](https://github.com/egonw/ons-wikipathways). The scripts in these repositories are
 used to populate Wikidata with chemical structures in the Scholia project [@Willighagen2018] and to support WikiPathways [@Slenter2018],
 with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project, in to support the
-creating of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
-Various of these use cases are ongoing and are not yet unpublished published, which is planned.
+creation of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
+Various of these use cases are ongoing and are not yet published, which is planned.
 
 # Acknowledgements
 
