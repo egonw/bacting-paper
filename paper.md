@@ -133,7 +133,9 @@ repositories at [https://github.com/egonw/ons-wikidata](https://github.com/egonw
 [https://github.com/egonw/ons-chebi](https://github.com/egonw/ons-chebi), and
 [https://github.com/egonw/ons-wikipathways](https://github.com/egonw/ons-wikipathways). The scripts in these repositories are
 used to populate Wikidata with chemical structures in the Scholia project [@Nielsen2017; @Willighagen2018] and to support WikiPathways [@Slenter2018],
-with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project, in to support the
+with OECD Testing Guidelines for the [NanoCommons](https://www.nanocommons.eu/) project (see []()), 
+to generate RDF for a public data set in the [NanoSolveIT](https://nanosolveit.eu/) project (see [https://github.com/NanoSolveIT/10.1021-acsnano.8b07562](https://github.com/NanoSolveIT/10.1021-acsnano.8b07562)) [@Afantitis2020], to create a booklet with data about the SARS-CoV-2
+and related coronavirusses (see [https://github.com/egonw/SARS-CoV-2-Queries](https://github.com/egonw/SARS-CoV-2-Queries)), and to support the
 creation of BridgeDb identifier mapping databases in an implementation study of the ELIXIR Metabolomics Community [@vanRijswijk2017].
 Various of these use cases are ongoing and are not yet published, which is planned.
 
