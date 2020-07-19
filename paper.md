@@ -118,7 +118,10 @@ Use of Bacting in the Groovy language is taking advantage from the fact that it 
 allowing `@Grab` to be use to dynamically download the code as in this example for the *cdk* manager:
 
 ```groovy
-@Grab(group='io.github.egonw.bacting', module='managers-cdk', version='0.0.11')
+@Grab(
+  group='io.github.egonw.bacting',
+  module='managers-cdk', version='0.0.11'
+)
 
 def cdk = new net.bioclipse.managers.CDKManager(".");
 
