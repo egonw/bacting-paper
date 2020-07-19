@@ -22,7 +22,10 @@ of biology and chemistry based on Eclipse [@bioclipse1]. It was later extended w
 functionality and scripts could be written in JavaScript, Python, and Groovy [@bioclipse2].
 An innovative aspect of the second Bioclipse version was that Bioclipse plugins could inject
 domain specific functionality into the scripting language. This was done using OSGi and Spring
-approaches, making so-called *managers* accessible in scripts.
+approaches, making so-called *managers* accessible in scripts. Bacting is a next generation,
+command line version of Bioclipse, that is easier updated, built, released, and used. A subset
+of the original functionality is available, and some managers have already been updated to
+use more recent versions of dependencies.
 
 # Statement of Need
 
