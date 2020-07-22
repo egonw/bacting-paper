@@ -17,25 +17,28 @@ bibliography: paper.bib
 
 # Summary
 
-Bioclipse was originally developed as an interactive user interface for research in the fields
-of biology and chemistry based on Eclipse [@bioclipse1]. It was later extended with scripting
+Bioclipse was originally developed as an interactive user interface (UI) based on Eclipse for research in the fields
+of biology and chemistry [@bioclipse1]. It was later extended with scripting
 functionality and scripts could be written in JavaScript, Python, and Groovy [@bioclipse2].
 An innovative aspect of the second Bioclipse version was that Bioclipse plugins could inject
 domain specific functionality into the scripting language. This was done using OSGi and Spring
-approaches, making so-called *managers* accessible in scripts. Bacting is a next generation,
-command line version of Bioclipse, that is easier updated, built, released, and used. A subset
+approaches, making so-called *managers* accessible in scripts. However, there have not been any
+recent Bioclipse releases. Bacting is a next generation,
+command line version of Bioclipse, that is more easily updated, built, released, and used. A subset
 of the original functionality is available, and some managers have already been updated to
 use more recent versions of dependencies.
 
 # Statement of Need
 
-However, the dependency of Bioclipse on the Eclipse UI requires the scripts to be run inside
+While Bioclipse has served our research for many years, a number of limitations has made
+this increasingly hard. For example, the dependency of Bioclipse on the Eclipse UI requires the scripts to be run inside
 a running Bioclipse application. This makes repeatedly running of a script needlessly hard
 and use in continuous integration systems or use on computing platforms impossible. A second
 problem was that the build and release system of Bioclipse was complex, making it hard for
-others to repeat creating new releases. For example, this complicates updating dependencies.
+others to repeat creating new releases. This is reflected in the lack of recent releases
+and complicates external developers to make patches, such as those for updating dependencies.
 
-These two needs triggered a next generation design of Bioclipse: 1. the managers providing
+These needs triggered a next generation design of Bioclipse: 1. the managers providing
 the domain-specific functionality would need to be usable on the command line; 2. building
 the Bioclipse managers should be possible on the command line, ideally with continuous build
 systems; 3. Bacting should be easy to install and reuse.
