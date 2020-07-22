@@ -94,10 +94,9 @@ version 2.3, released in 2017 [@Mayfield2019; @Willighagen2017]. The *opsin* man
 updated to use OPSIN version 2.4.0, released in 2018 [@Lowe2011]. The *bridgedb*
 manager was updated to BridgeDb version 2.3.8, released in 2020 [@Brenninkmeijer2020; @vanIersel2010].
 
-# Functionality
+# Ported Functionality
 
-Bioclipse has a long list of managers and so far only a subset has been ported, focusing
-in personal use cases, some of which are briefly described in this table:
+Bioclipse has a long list of managers and so far only a subset has been ported, which is briefly described in this table:
 
 | Bacting Manager      | Functionality                                                                        |
 | -------------------- | ------------------------------------------------------------------------------------ |
